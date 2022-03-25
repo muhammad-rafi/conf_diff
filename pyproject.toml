@@ -1,6 +1,12 @@
 [tool.poetry]
 name = "conf_diff"
-version = "0.2.0"
+
+packages = [
+    { include = "conf_diff.py" },
+    { include = "*.py" },
+]
+
+version = "0.5.0"
 description = "compare configuration files"
 authors = ["Muhammad Rafi <murafi@cisco.com>"]
 license = "MIT License"

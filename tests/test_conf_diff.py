@@ -1,9 +1,4 @@
 import pytest
-from conf_diff import __version__
-
-
-def test_version():
-    assert __version__ == '0.2.0'
 
 
 @pytest.mark.parametrize("a,b,c", [(10, 20, 30)])
