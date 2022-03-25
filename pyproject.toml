@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "conf_diff"
+version = "0.1.0"
+description = "compare configuration files"
+authors = ["Muhammad Rafi <murafi@cisco.com>"]
+license = "MIT License"
+readme = "README.md"
+homepage = "https://github.com/muhammad-rafi/conf_diff"
+repository = "https://github.com/muhammad-rafi/conf_diff"
+
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+colorama = "^0.4.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+tox = "^3.24.5"
+autopep8 = "^1.6.0"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
