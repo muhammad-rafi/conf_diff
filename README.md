@@ -68,7 +68,7 @@ See the screenshot below for the `html_diff_output.html`
 ![App Screenshot](https://github.com/muhammad-rafi/conf_diff/blob/main/images/html_output_file.png)
 
 ### Example
-In this eample, I am running a script with well know netmiko library and taking a backup of running config before and after the change. Then compare the configuration difference between thsese config files. See the [example](https://github.com/muhammad-rafi) directory. 
+In this example, I am running a script with well known 'netmiko' library and taking a backup of running config before and after the change. Then compare the configuration difference between these config files. See the [example](https://github.com/muhammad-rafi/conf_diff/tree/main/examples) directory. 
 
 
 ```python
@@ -144,7 +144,7 @@ for host in hosts_list:
 ```
 
 ## Issues
-Please raise any issue or pull request if you find something wrong with this module.
+Please raise an issue or pull request if you find something wrong with this module.
 
 ## Authors
 [Muhammad Rafi](https://github.com/muhammad-rafi)
