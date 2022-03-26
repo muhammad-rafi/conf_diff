@@ -1,20 +1,11 @@
-import datetime
+from colorama import Fore, init
 
-now = datetime.datetime.now()
-date_time = now.strftime("%Y-%m-%d %H:%M:%S")
-
-try:
-    from colorama import Fore, Back, Style, init
-    init()
-except ImportError:
-    class ColorFallback():
-        def __getattr__(self, name=''):
-            return name
-    Fore = Back = Style = ColorFallback()
+# initialise colorama
+init()
 
 
-def color_diff(diff):
-    for line in diff:
+def color_diff(config_diff):
+    for line in config_diff:
         if line.startswith('@@'):
             yield Fore.MAGENTA + line + Fore.RESET
         elif line.startswith('+'):

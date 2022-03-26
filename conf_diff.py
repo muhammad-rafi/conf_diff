@@ -1,6 +1,10 @@
-from color_diff import color_diff, date_time
+from color_diff import color_diff
 from html_format import html_style, difflib
 from pathlib import Path
+import datetime
+
+now = datetime.datetime.now()
+date_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
 
 class ConfDiff:
