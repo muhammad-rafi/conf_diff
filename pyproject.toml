@@ -21,6 +21,7 @@ include = [
 [tool.poetry.dependencies]
 python = "^3.8"
 colorama = "^0.4.4"
+importlib-metadata = { version = "~=1.0", python = ">=3.8" }
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
