@@ -48,3 +48,19 @@ jobs:
           # Run the tests using tox
         - name: Test with tox
           run: tox
+
+        #   # Build distribution with setup.py 
+        # - name: Build distributions
+        #   run: python setup.py sdist bdist_wheel --universal
+
+          # Build distribution with Poetry 
+        - name: Build distributions
+          run: poetry build
+
+          # Public the package on PyPI
+        - name: Publish package
+          if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+          uses: pypa/gh-action-pypi-publish@release/v1.5.0
+          with:
+            user: __token__
+            password: ${{ secrets.PYPI_API_TOKEN }}
