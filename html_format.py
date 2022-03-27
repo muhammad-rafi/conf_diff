@@ -42,7 +42,7 @@ def html_style():
 
     table_template = """
         <table class="diff" id="difflib_chg_%(prefix)s_top"
-               cellspacing="0" cellpadding="3" rules="groups" >
+               cellspacing="0" cellpadding="3" align="center" rules="groups" >
             <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
             <colgroup></colgroup> <colgroup></colgroup> <colgroup></colgroup>
                 %(header_row)s
