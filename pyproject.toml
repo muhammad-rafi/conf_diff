@@ -6,7 +6,7 @@ packages = [
     { include = "*.py" },
 ]
 
-version = "0.6.3"
+version = "0.6.4"
 description = "compare configuration files"
 authors = ["Muhammad Rafi <murafi@cisco.com>"]
 license = "MIT License"
