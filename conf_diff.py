@@ -51,7 +51,7 @@ class ConfDiff:
                     with open(file3, "w") as f:
                         f.write(config_diff)
 
-                    print(f"\n{'*'*75}\n{' '*15}HTML output file ({file3}) has been saved\n{'*'*75}")
+                    print(f"\n{'*'*75}\nHTML output file ({file3}) has been saved\n{'*'*75}")
 
                 else:
                     config_diff = difflib.unified_diff(file1, file2, self.file1.name, self.file2.name, n=4)

@@ -7,7 +7,7 @@ init()
 def color_diff(config_diff):
     for line in config_diff:
         if line.startswith('@@'):
-            yield Fore.MAGENTA + line + Fore.RESET
+            yield Fore.YELLOW + line + Fore.RESET
         elif line.startswith('+'):
             yield Fore.GREEN + line + Fore.RESET
         elif line.startswith('-'):

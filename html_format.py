@@ -65,7 +65,7 @@ def html_style():
         </span>
         """
 
-    d = difflib.HtmlDiff(wrapcolumn=85)
+    d = difflib.HtmlDiff(wrapcolumn=100)
     d._file_template = template
     d._styles = styles
     d._legend = legend

@@ -1,4 +1,3 @@
-[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/muhammad-rafi/conf_diff)
 [![license](https://img.shields.io/github/license/abatilo/actions-poetry.svg)](https://github.com/muhammad-rafi/conf_diff/blob/main/LICENSE)
 [![Pypi](https://img.shields.io/pypi/v/conf_diff.svg)](https://pypi.org/project/conf-diff/) 
 [![Build Status](https://github.com/muhammad-rafi/conf_diff/actions/workflows/main.yml/badge.svg)](https://github.com/muhammad-rafi/conf_diff/actions)
@@ -27,44 +26,44 @@ pip install conf-diff
 ## Usage:
 
 ### Prerequisite
-As this module compares the configuration difference between two config file, so we need to have two configuration files should be present in the same directory where you are running the script from or specify the absolute path for the configuration files. e.g. `"/Users/rafi/sandbox-nxos-1.cisco.com_before_config.cfg"` and `"/Users/rafi/sandbox-nxos-1.cisco.com_after_config.cfg"
-`
+As this module compares the configuration difference between two config file, so we need to have two configuration files should be present in the same directory where you are running the script from or specify the absolute path for the configuration files. e.g. `"/Users/rafi/sandbox-nxos-1.cisco.com_before_config.cfg"` and `"/Users/rafi/sandbox-nxos-1.cisco.com_after_config.cfg"`
 
 You may use either .cfg or .txt file extensions.
 
-In the below example, I am using two running configuration files from the Cisco always-on NXOS Sandbox, assuming that, `sandbox-nxos-1.cisco.com_before_config.cfg` was taken before the change and ` sandbox-nxos-1.cisco.com_after_config.cfg` after the change, and we want to see the configuration diffrence between them. You may name the filenames as you like or add the timestamps.
+In the below example, I am using two output files of 'show running-config ntp' from the Cisco NXOS always-on sandbox, assuming that, `sbx-nxos-mgmt.cisco.com_ntp_before.cfg` was taken before the change and `sbx-nxos-mgmt.cisco.com_ntp_after.cfg` after the change, and we want to see the configuration diffrence between them. You may name the filenames as you like or add the timestamp.
 
-Import the module on your python script and instantiate a class object 'delta'
+Import the `conf_diff` module in your python script and instantiate a class object with both config output files as arguments.
 
 ```python
 
 import conf_diff
 
-# Instantiate a class object 'delta'
-delta = conf_diff.ConfDiff("sandbox-nxos-1.cisco.com_before_config.cfg", "sandbox-nxos-1.cisco.com_after_config.cfg")
+# Instantiate a class object 'config_change'
+config_change = conf_diff.ConfDiff("sbx-nxos-mgmt.cisco.com_ntp_before.cfg", "sbx-nxos-mgmt.cisco.com_ntp_after.cfg")
 
-# Display the output of the diff on the terminal 
-print(delta.diff())
+# Display the output of the configuration difference on the terminal 
+print(config_change.diff())
 
 ```
 
-Above will generate a configuration difference on the terminal. 
+This will display the colourful configuration difference on the terminal. 
 
 ![App Screenshot](https://github.com/muhammad-rafi/conf_diff/blob/main/images/cli_output.png)
 
-To generate a html output file, add third parameter as the expected output file name. e.g. `"html_diff_output.html"`
+To generate a html output file, add third argument as the expected output file name. e.g. `"sbx-nxos-mgmt.cisco.com_html_output.html"`
 
 ```python
 
- # Instantiate a class object 'delta'
-delta = conf_diff.ConfDiff("sandbox-nxos-1.cisco.com_before_config.cfg", "sandbox-nxos-1.cisco.com_after_config.cfg", "html_diff_output.html")
+ # Instantiate a class object 'html_diff'
+html_diff = conf_diff.ConfDiff("sbx-nxos-mgmt.cisco.com_ntp_before.cfg", "sbx-nxos-mgmt.cisco.com_ntp_after.cfg", "sbx-nxos-mgmt.cisco.com_html_output.html")
 
-# Generates a `html_diff_output.html` in your current directory unless expected full path is specified.
-delta.diff()
+# Generates a `sbx-nxos-mgmt.cisco.com_html_output.html` in your current directory unless expected absolute path is specified.
+html_diff.diff()
 
 ```
+This will generates a `sbx-nxos-mgmt.cisco.com_html_output.html` in your current directory unless expected absolute path is specified.
 
-See the screenshot below for the `html_diff_output.html`
+See the screenshot below for the `sbx-nxos-mgmt.cisco.com_html_output.html`
 
 ![App Screenshot](https://github.com/muhammad-rafi/conf_diff/blob/main/images/html_output_file.png)
 
