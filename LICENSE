@@ -1,13 +1,12 @@
-<p align="justify">[Index](#index)CISCO SAMPLE CODE LICENSE, Version 1.0
+CISCO SAMPLE CODE LICENSE, Version 1.0
 Copyright (c) 2022 Cisco Systems, Inc. or its affiliates
 
-These terms govern this Cisco Systems, Inc. (“Cisco”), example or demo source code and its
-associated documentation (together, the “Sample Code”). By downloading, copying, modifying
-compiling, or redistributing the Sample Code, you accept and agree to be bound by the following
-terms and conditions (the “License”). If you are accepting the License on behalf of an entity, you represent
-that you have the authority to do so (either you or the entity, “you”). Sample Code is not supported by Cisco
-TAC and is not tested for quality or performance. This is your only license to the Sample Code and all rights
-not expressly granted are reserved.
+These terms govern this Cisco Systems, Inc. (“Cisco”), example or demo source code and its associated 
+documentation (together, the “Sample Code”). By downloading, copying, modifying compiling, or redistributing 
+the Sample Code, you accept and agree to be bound by the following terms and conditions (the “License”). If 
+you are accepting the License on behalf of an entity, you represent that you have the authority to do so 
+(either you or the entity, “you”). Sample Code is not supported by Cisco TAC and is not tested for quality 
+or performance. This is your only license to the Sample Code and all rights not expressly granted are reserved.
 
 1. LICENSE GRANT: Subject to the terms and conditions of this License, Cisco hereby grants to you a
 perpetual, worldwide, non-exclusive, non-transferable, non-sublicensable, royalty-free license to copy and
