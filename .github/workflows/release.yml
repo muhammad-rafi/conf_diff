@@ -25,7 +25,7 @@ jobs:
           body: 
           draft: false
           prerelease: false
-        # Public the package on PyPI 
+        # Build and Publish the package on PyPI 
       - name: Publish python poetry package
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
         uses: JRubics/poetry-publish@v1.10
