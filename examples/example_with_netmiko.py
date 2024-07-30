@@ -65,3 +65,4 @@ for host in hosts_list:
     # To generate a HTML output file
     html_diff = conf_diff.ConfDiff(f"{device['ip']}_before_config.cfg", f"{device['ip']}_after_config.cfg", "html_diff_output.html")
     html_diff.diff()
+    
